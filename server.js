@@ -8,6 +8,8 @@ const server = require('./src/app')({
   },
 });
 
+const a = 10;
+
 const start = async () => {
   try {
     await server.listen({

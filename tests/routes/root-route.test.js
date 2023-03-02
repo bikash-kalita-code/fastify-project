@@ -1,4 +1,3 @@
-const { removeAllListeners } = require('nodemon');
 const build = require('../../src/app');
 
 let app;
