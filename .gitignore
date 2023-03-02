@@ -1,1 +1,4 @@
 node_modules
+
+# coverage directory is created by 'jest'
+coverage
