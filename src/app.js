@@ -1,8 +1,12 @@
 // NOTE: Here, we will create the application not the server
 const fastify = require('fastify');
+const db = require('./plugin/database');
 
 const build = (opts = {}) => {
   const app = fastify(opts);
+
+  // register plugins
+  app.register(db);
 
   // For now, we don't need async below
   app.get('/', (request, reply) => {

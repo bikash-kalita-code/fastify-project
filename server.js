@@ -12,6 +12,7 @@ const start = async () => {
   try {
     await server.listen({
       port: PORT,
+      path: '0.0.0.0',
     });
   } catch (error) {
     server.log.error(error);
