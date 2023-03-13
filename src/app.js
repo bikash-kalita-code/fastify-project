@@ -1,12 +1,16 @@
 // NOTE: Here, we will create the application not the server
 const fastify = require('fastify');
 const db = require('./plugin/database');
+const testRoute = require('./routes/tempTestRoute');
 
 const build = (opts = {}) => {
   const app = fastify(opts);
 
   // register plugins
   app.register(db);
+
+  // register routes
+  app.register(testRoute, {prefix: 'api/v1/test' })
 
   // For now, we don't need async below
   app.get('/', (request, reply) => {

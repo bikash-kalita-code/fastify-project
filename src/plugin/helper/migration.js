@@ -9,8 +9,13 @@ const applyMigration = () =>
     dbMigrate.up((error, result) => {
       if (error) {
         reject(error);
+      } else {
+        if (result === undefined) {
+          resolve(0);
+        }
+        // My code ends
+        resolve(result);
       }
-      resolve(result.length);
     });
   });
 
