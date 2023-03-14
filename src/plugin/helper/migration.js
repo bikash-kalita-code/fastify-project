@@ -13,7 +13,6 @@ const applyMigration = () =>
         if (result === undefined) {
           resolve(0);
         }
-        // My code ends
         resolve(result);
       }
     });
