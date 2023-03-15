@@ -36,6 +36,11 @@ containers:
       POSTGRES_DB: db
 
 tasks:
+  start-test-db:
+    description: start test database
+    run:
+      container: db-test
+      
   say-hello:
     description: Say hello to the nice person reading the Batect documentation
     run:
